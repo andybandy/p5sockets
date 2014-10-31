@@ -1,7 +1,7 @@
 var socket;
 
 function setup() {
-  socket = io.connect('http://localhost:8081');
+  socket = io.connect(location.origin);
   socket.on('mouse', function(data) {
     console.log(data);
     fill(0, 0, 255);
