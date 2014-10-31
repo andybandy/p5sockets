@@ -40,7 +40,7 @@ function handleRequest(req, res) {
 }
 
 var server = http.createServer(handleRequest);
-server.listen(8081);
+server.listen(process.env.PORT || 8081);
 
 var io = require('socket.io').listen(server);
 
