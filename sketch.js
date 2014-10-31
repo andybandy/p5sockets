@@ -1,6 +1,7 @@
 var socket;
 
 function setup() {
+  createCanvas(710, 400);
   socket = io.connect(location.origin);
   socket.on('mouse', function(data) {
     console.log(data);
